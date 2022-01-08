@@ -1,4 +1,5 @@
-const postcss = require('postcss');
+const { run, defaults, css, html } = require('../../util/run');
+const plugin = require('./');
 
 
 //
@@ -52,59 +53,57 @@ const theme = {
 //
 //////////////////////////////////////////////////////////////////////
 
-let expectedTypeStyles = `
-.type-h-1 {
-    font-family: 'Helvetica Neue', arial, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1.8;
-    font-size: 2.4rem;
-}
-@media (min-width: 768px) {
-    .type-h-1 {
-        font-size: 3.2rem;
-    }
-}
-@media (min-width: 1024px) {
-    .type-h-1 {
-        font-size: 4.8rem;
-    }
-}
-.type-body-1 {
-    font-family: 'Helvetica Neue', arial, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: 1.8;
-    text-transform: none;
-    letter-spacing: 0;
-    font-size: 13px;
-}
-@media (min-width: 768px) {
-    .type-body-1 {
-        font-size: 48px;
-    }
-}
-`;
+test('Type Styles', async () => {
+  let config = {
+    theme,
+    content: [
+      {
+        raw: html`
+          <h1 class="type-h-1">Hello</h1>
+          <p class="type-body-1">Hello</p>
+        `,
+      },
+    ],
+  };
 
-it('Type Styles', () => {
-  let css = postcss([
-    require('tailwindcss')({
-      theme,
-      content: [
-        {
-          raw: `
-            <h1 class="type-h-1">Hello</h1>
-            <p class="type-body-1">Hello</p>
-          `,
-        },
-      ],
-      plugins: [require('./index')],
-    }),
-  ]).process('@tailwind utilities;').css;
-
-  expect(css).toBe(expectedTypeStyles.trim());
+  return run(config, plugin).then((result) => {
+    expect(result.css).toMatchFormattedCss(css`
+      ${defaults}
+      .type-h-1 {
+          font-family: 'Helvetica Neue', arial, sans-serif;
+          font-weight: normal;
+          font-style: normal;
+          line-height: 1.8;
+          font-size: 2.4rem;
+      }
+      @media (min-width: 768px) {
+          .type-h-1 {
+              font-size: 3.2rem;
+          }
+      }
+      @media (min-width: 1024px) {
+          .type-h-1 {
+              font-size: 4.8rem;
+          }
+      }
+      .type-body-1 {
+          font-family: 'Helvetica Neue', arial, sans-serif;
+          font-weight: normal;
+          font-style: normal;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          line-height: 1.8;
+          text-transform: none;
+          letter-spacing: 0;
+          font-size: 13px;
+      }
+      @media (min-width: 768px) {
+          .type-body-1 {
+              font-size: 48px;
+          }
+      }
+    `);
+  });
 });
 
 
@@ -113,26 +112,26 @@ it('Type Styles', () => {
 //
 //////////////////////////////////////////////////////////////////////
 
-let expectedFontStacks = `
-.font-stack-helvetica {
-    font-family: 'Helvetica Neue', arial, sans-serif;
-    font-weight: normal;
-    font-style: normal
-}
-`;
+test('Font Stacks', async () => {
+  let config = {
+    theme,
+    content: [
+      {
+        raw: html`
+          <h1 class="font-stack-helvetica">Hello</h1>
+        `,
+      },
+    ],
+  };
 
-it('Font Stacks', () => {
-  let css = postcss([
-    require('tailwindcss')({
-      theme,
-      content: [
-        {
-          raw: '<h1 class="font-stack-helvetica">Hello</h1>',
-        },
-      ],
-      plugins: [require('./index')],
-    }),
-  ]).process('@tailwind utilities;').css;
-
-  expect(css).toBe(expectedFontStacks.trim());
+  return run(config, plugin).then((result) => {
+    expect(result.css).toMatchFormattedCss(css`
+      ${defaults}
+      .font-stack-helvetica {
+          font-family: 'Helvetica Neue', arial, sans-serif;
+          font-weight: normal;
+          font-style: normal
+      }
+    `);
+  });
 });

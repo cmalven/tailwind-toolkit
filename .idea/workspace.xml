@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acb7fbe9-5b34-41f3-ad44-5efa1e75dfb5" name="Changes" comment="" />
+    <list default="true" id="acb7fbe9-5b34-41f3-ad44-5efa1e75dfb5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/fluid/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/fluid/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/type/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/type/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/type/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/type/test.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +55,9 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -57,9 +67,10 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="npm i" />
+      <command value="npm i prettier -D" />
     </option>
   </component>
-  <component name="RunManager" selected="Jest.Run Tests">
+  <component name="RunManager" selected="Jest.Watch Tests">
     <list>
       <item itemvalue="Jest.Run Tests" />
       <item itemvalue="Jest.Watch Tests" />

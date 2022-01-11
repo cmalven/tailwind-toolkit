@@ -81,7 +81,7 @@ test('Fluid Size', async () => {
         margin-bottom: var(--fluid-size-lg);
       }
       .p-1 {
-        padding: var(--fluid-size-1);;
+        padding: var(--fluid-size-1);
       }
     `);
   });

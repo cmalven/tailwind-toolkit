@@ -20,9 +20,9 @@ Simply require the plugins or utilities in your `tailwindcss.config.js` file, an
 ```js
 // tailwind.config.js
 plugins: [
-  require('@malven/tailwind-toolkit/fluid'),
-  require('@malven/tailwind-toolkit/fluid-size'),
   require('@malven/tailwind-toolkit/type'),
+  require('@malven/tailwind-toolkit/fluid-size'),
+  require('@malven/tailwind-toolkit/fluid'),
 ]
 ```
 

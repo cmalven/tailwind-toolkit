@@ -35,9 +35,9 @@ test('Fluid', async () => {
       .fluid-\[marginBottom\2c 20px\2c 100px\] {
         margin-bottom: 20px;
       }
-      @media (min-width: 300px) {
+      @media (min-width: 320px) {
         .fluid-\[marginBottom\2c 20px\2c 100px\] {
-          margin-bottom: calc(20px + 80 * (100vw - 300px) / 980);
+          margin-bottom: calc(20px + 80 * (100vw - 320px) / 960);
         }
       }
       @media (min-width: 1280px) {
@@ -48,9 +48,9 @@ test('Fluid', async () => {
       .fluid-\[marginBottom\2c 20px\2c 100px\2c min\2c lg\] {
         margin-bottom: 20px;
       }
-      @media (min-width: 300px) {
+      @media (min-width: 320px) {
         .fluid-\[marginBottom\2c 20px\2c 100px\2c min\2c lg\] {
-          margin-bottom: calc(20px + 80 * (100vw - 300px) / 724);
+          margin-bottom: calc(20px + 80 * (100vw - 320px) / 704);
         }
       }
       @media (min-width: 1024px) {

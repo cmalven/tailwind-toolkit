@@ -28,11 +28,13 @@ const addFluidSizeBaseVariables = (theme, styles, sizeName) => {
       // Set the current breakpoint to be the next
       prevBreakpoint = breakpoint;
     }
-    return Object.assign({}, styles, newStyles);
+    return Object.assign({}, styles, { ':root': newStyles });
   } else {
     // If the size is a single value
     return Object.assign({}, styles, {
-      [`--fluid-size-${sizeName}`]: size,
+      ':root': {
+        [`--fluid-size-${sizeName}`]: size,
+      },
     });
   }
 

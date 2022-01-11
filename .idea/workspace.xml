@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bca33813-eb62-4f12-9200-5eafdf371333" name="Changes" comment="Fluid size map can contain single key value pairs rather than map of breakpoints.">
+    <list default="true" id="bca33813-eb62-4f12-9200-5eafdf371333" name="Changes" comment="Fix typo.">
+      <change afterPath="$PROJECT_DIR$/plugins/fluid/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/fluid-size/fluid-size.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/fluid-size/fluid-size.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/fluid-size/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/fluid-size/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/fluid/fluid.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/fluid/fluid.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/get-min-size.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/get-min-size.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +129,7 @@
       <workItem from="1641673514418" duration="84000" />
       <workItem from="1641673603746" duration="6002000" />
       <workItem from="1641913919644" duration="969000" />
-      <workItem from="1641914940421" duration="4670000" />
+      <workItem from="1641914940421" duration="6699000" />
     </task>
     <task id="LOCAL-00001" summary="Fluid sizes is working.">
       <created>1641919079858</created>
@@ -138,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641919554152</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fix typo.">
+      <created>1641919683892</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1641919683892</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +172,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fluid sizes is working." />
     <MESSAGE value="Fluid size map can contain single key value pairs rather than map of breakpoints." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fluid size map can contain single key value pairs rather than map of breakpoints." />
+    <MESSAGE value="Fix typo." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix typo." />
   </component>
 </project>

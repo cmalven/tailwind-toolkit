@@ -48,25 +48,39 @@ test('Fluid Size', async () => {
 
   return run(config, plugin).then((result) => {
     expect(result.css).toMatchFormattedCss(css`
-      --fluid-size-1: 1px;
-      --fluid-size-none: 0px;
-      --fluid-size-s: 8px;
-      --fluid-size-m: 24px;
-      @media (min-width: 300px) {
-        --fluid-size-m: calc(24px + 8 * (100vw - 300px) / 468);
+      :root {
+        --fluid-size-1: 1px;
+        --fluid-size-none: 0px;
+        --fluid-size-s: 8px;
+        --fluid-size-m: 24px;
+      }
+      @media (min-width: 320px) {
+        :root {
+          --fluid-size-m: calc(24px + 8 * (100vw - 320px) / 448);
+        }
       }
       @media (min-width: 768px) {
-        --fluid-size-m: 32px;
+        :root {
+          --fluid-size-m: 32px;
+        }
       }
-      --fluid-size-lg: 48px;
-      @media (min-width: 300px) {
-        --fluid-size-lg: calc(48px + 16 * (100vw - 300px) / 468);
+      :root {
+        --fluid-size-lg: 48px;
+      }
+      @media (min-width: 320px) {
+        :root {
+          --fluid-size-lg: calc(48px + 16 * (100vw - 320px) / 448);
+        }
       }
       @media (min-width: 768px) {
-        --fluid-size-lg: calc(64px + 64 * (100vw - 768px) / 256);
+        :root {
+          --fluid-size-lg: calc(64px + 64 * (100vw - 768px) / 256);
+        }
       }
       @media (min-width: 1024px) {
-        --fluid-size-lg: 128px;
+        :root {
+          --fluid-size-lg: 128px;
+        }
       }
       ${defaults}
       .mx-s {

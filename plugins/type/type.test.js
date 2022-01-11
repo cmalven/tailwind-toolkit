@@ -9,8 +9,13 @@ const plugin = require('./');
 
 const theme = {
   fontStacks: {
-    helvetica: {
+    sans: {
       fontFamily: `'Helvetica Neue', arial, sans-serif`,
+      fontWeight: 'normal',
+      fontStyle: 'normal',
+    },
+    serif: {
+      fontFamily: `Georgia, Cambria, 'Times New Roman', Times, serif;`,
       fontWeight: 'normal',
       fontStyle: 'normal',
     },
@@ -18,11 +23,10 @@ const theme = {
   remBase: 10,
   typeStyles: {
     'h-1': {
-      stack: 'helvetica',
+      stack: 'sans',
       fontSmoothing: false,
-      fluid: false,
       sizes: {
-        default: 24,
+        min: 24,
         md: 32,
         lg: 48,
       },
@@ -31,11 +35,10 @@ const theme = {
       },
     },
     'body-1': {
-      stack: 'helvetica',
+      stack: 'serif',
       fontSmoothing: true,
-      fluid: false,
       sizes: {
-        default: '13px',
+        min: '13px',
         md: '48px',
       },
       properties: {
@@ -87,7 +90,7 @@ test('Type Styles', async () => {
           }
       }
       .type-body-1 {
-          font-family: 'Helvetica Neue', arial, sans-serif;
+          font-family: Georgia, Cambria, "Times New Roman", Times, serif;
           font-weight: normal;
           font-style: normal;
           -webkit-font-smoothing: antialiased;
@@ -118,7 +121,7 @@ test('Font Stacks', async () => {
     content: [
       {
         raw: html`
-          <h1 class="font-stack-helvetica">Hello</h1>
+          <h1 class="font-stack-sans">Hello</h1>
         `,
       },
     ],
@@ -127,7 +130,7 @@ test('Font Stacks', async () => {
   return run(config, plugin).then((result) => {
     expect(result.css).toMatchFormattedCss(css`
       ${defaults}
-      .font-stack-helvetica {
+      .font-stack-sans {
           font-family: 'Helvetica Neue', arial, sans-serif;
           font-weight: normal;
           font-style: normal

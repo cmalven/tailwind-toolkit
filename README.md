@@ -2,9 +2,9 @@
 
 ## Included Plugins
 
-- [Responsive Type]()
-- [Fluid Size]()
-- [Dynamic Fluid]()
+- [Responsive Type](./type)
+- [Fluid Size](./fluid-size)
+- [Dynamic Fluid](./fluid)
 
 ## Installation
 

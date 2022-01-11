@@ -44,8 +44,8 @@ const addTypeStyles = (theme, styles = {}, name) => {
   // Output sizes
   for (let size in values.sizes) {
     const sizeValue = values.sizes[size];
-    if (size === 'default') {
-      // Output the default size
+    if (size === 'min') {
+      // Output the minimum size
       typeStyle.fontSize = addFontSizeUnit(theme, sizeValue);
     } else {
       // Output the size for breakpoint

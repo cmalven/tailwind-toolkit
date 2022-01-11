@@ -9,25 +9,33 @@ const addFluidSizeBaseVariables = (theme, styles, sizeName) => {
 
   let prevBreakpoint = 'min';
 
-  for (let breakpoint in size) {
-    const value = size[breakpoint];
-    newStyles = Object.assign({}, newStyles, getFluidStyles(
-      theme,
-      breakpoint === 'min',
-      breakpoint !== 'min',
-      breakpoint !== 'min',
-      `--fluid-size-${sizeName}`,
-      size[prevBreakpoint],
-      value,
-      prevBreakpoint,
-      breakpoint,
-    ));
+  if (typeof size === 'object') {
+    // If the size is an object with breakpoints
+    for (let breakpoint in size) {
+      const value = size[breakpoint];
+      newStyles = Object.assign({}, newStyles, getFluidStyles(
+        theme,
+        breakpoint === 'min',
+        breakpoint !== 'min',
+        breakpoint !== 'min',
+        `--fluid-size-${sizeName}`,
+        size[prevBreakpoint],
+        value,
+        prevBreakpoint,
+        breakpoint,
+      ));
 
-    // Set the current breakpoint to be the next
-    prevBreakpoint = breakpoint;
+      // Set the current breakpoint to be the next
+      prevBreakpoint = breakpoint;
+    }
+    return Object.assign({}, styles, newStyles);
+  } else {
+    // If the size is a single value
+    return Object.assign({}, styles, {
+      [`--fluid-size-${sizeName}`]: size,
+    });
   }
 
-  return Object.assign({}, styles, newStyles);
 };
 
 const fluidSize = plugin.withOptions(function(options) {

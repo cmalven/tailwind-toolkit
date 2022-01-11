@@ -9,11 +9,9 @@ const plugin = require('./');
 
 const theme = {
   sizes: {
+    1: '1px',
     none: {
       min: '0px',
-    },
-    1: {
-      min: '1px',
     },
     s: {
       min: '8px',

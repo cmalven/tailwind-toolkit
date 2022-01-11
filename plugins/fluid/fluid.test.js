@@ -15,7 +15,7 @@ const theme = {};
 //
 //////////////////////////////////////////////////////////////////////
 
-test('fluid', async () => {
+test('Fluid', async () => {
   let config = {
     theme,
     content: [

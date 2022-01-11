@@ -4,14 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acb7fbe9-5b34-41f3-ad44-5efa1e75dfb5" name="Changes" comment="">
+    <list default="true" id="bca33813-eb62-4f12-9200-5eafdf371333" name="Changes" comment="Fluid sizes is working.">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/tailwind-toolkit.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/fluid-size/fluid-size.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/fluid-size/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/get-fluid-styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/get-min-size.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/strip-unit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/fluid/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/fluid/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/type/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/type/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/type/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/type/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/fluid/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/fluid/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/fluid/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/fluid/fluid.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/type/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/type/type.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +42,16 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="23OeYES5DtB8UbeFZ0jfTvuVWjY" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2" />
+  <component name="ProjectId" id="23Qk5FXdIO51A4Q950mgcPtZKKT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="false" />
@@ -46,45 +61,84 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/plugins/fluid" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.stylelint" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/plugins/fluid" />
-    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="npm i" />
-      <command value="npm i prettier -D" />
+      <command value="npm run test" />
     </option>
   </component>
-  <component name="RunManager" selected="Jest.Watch Tests">
+  <component name="RunManager" selected="npm.test">
+    <configuration name="Generate Files" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$USER_HOME$/Dropbox/Config/Shell Scripts/yo_base_files.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/../my-project" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/zsh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm">
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2">
+        <option name="LaunchBrowser.Before.Run" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" url="http://localhost:3000" />
+      </method>
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Jest.Run Tests" />
       <item itemvalue="Jest.Watch Tests" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="Shell Script.Generate Files" />
+      <item itemvalue="npm.test" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="acb7fbe9-5b34-41f3-ad44-5efa1e75dfb5" name="Changes" comment="" />
-      <created>1641609607548</created>
+      <changelist id="bca33813-eb62-4f12-9200-5eafdf371333" name="Changes" comment="" />
+      <created>1641673512959</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1641609607548</updated>
-      <workItem from="1641609609375" duration="3895000" />
+      <updated>1641673512959</updated>
+      <workItem from="1641673514418" duration="84000" />
+      <workItem from="1641673603746" duration="6002000" />
+      <workItem from="1641913919644" duration="969000" />
+      <workItem from="1641914940421" duration="4052000" />
     </task>
     <servers />
   </component>
@@ -102,8 +156,8 @@
       </map>
     </option>
   </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fluid sizes is working." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fluid sizes is working." />
   </component>
 </project>

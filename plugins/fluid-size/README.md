@@ -50,5 +50,5 @@ This plugin uses CSS custom properties to store spacing combinations, and you ca
 
 ```html
 
-<p class="mt-[calc(var(--fluid-size-lg)_*_2)]">Hello</p>
+<p class="mt-[calc(var(--fluid-size-lg)*2)]">Hello</p>
 ```
